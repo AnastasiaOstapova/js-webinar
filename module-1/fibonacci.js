@@ -16,6 +16,23 @@ function fibonacci(n) {
      */
     // PLACE YOUR CODE BETWEEN THIS...
 
+    if (n <= 0)
+        return 0;
+    if (n === 1)
+        return 1;
+
+    let fibo = [];
+    fibo.push(0)
+    fibo.push(1);
+
+    for (let i = 2; i < n + 1; i++) {
+        // fibo[i] = fibo[i - 2] + fibo[i - 1];
+
+        fibo[i] = fibonacci(i - 2) + fibonacci(i - 1);
+    }
+    
+    nThFibonacci = fibo[fibo.length - 1];
+
     // ...AND THIS COMMENT LINE!
     return nThFibonacci;
 }
