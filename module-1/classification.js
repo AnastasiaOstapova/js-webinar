@@ -22,7 +22,33 @@ function grade(score) {
      */
     // PLACE YOUR CODE BETWEEN THIS...
 
+    if (score < 0 || score > 100)
+        return 0;
+
+    const createArr = function(start, end) {
+        const arr = new Array();
+    
+        for (let i = start; i <= end; i++)
+            arr.push(i);
+    
+        return arr;
+    }
+
+    const templ = new Map([
+        [1, createArr(0, 59)],
+        [2, createArr(60, 69)],
+        [3, createArr(70, 79)],
+        [4, createArr(80, 89)],
+        [5, createArr(90, 100)]
+    ]);
+    
+    templ.forEach((value, key, map) => {
+        if (value.includes(score))
+            gradeOfStudent = key;
+    });
+
     // ...AND THIS COMMENT LINE!
+
     return gradeOfStudent;
 }
 module.exports = grade;
