@@ -1,7 +1,7 @@
 const calc = require('../calc');
 const expect = require('chai').expect;
 
-describe.only('calc', () => {
+describe('calc', () => {
     /*
      * calc(3).v // 3
      * calc(3).add(5).v // 8

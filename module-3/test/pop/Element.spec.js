@@ -2,7 +2,7 @@ const ElementFinder = require('../mock/ElementFinder');
 const Element = require('../../pop/Element');
 const expect = require('chai').expect;
 
-describe('Element Class', () => {
+describe.only('Element Class', () => {
     beforeEach(() => {
         global.element = ElementFinder.element;
     });
